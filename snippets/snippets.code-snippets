@@ -1,0 +1,127 @@
+{
+  "Basic Client": {
+    "prefix": ["harmony-client", "client"],
+    "body": [
+      "import { Client, Message, Intents } from 'https://deno.land/x/harmony/mod.ts';",
+      "",
+      "const client = new Client();",
+      "",
+      "client.on('ready', () => {",
+      "\tconsole.log(`Ready! User: ${client.user?.tag}`);",
+      "})",
+      "",
+      "client.on('messageCreate', (msg: Message): void => {",
+      "\tif(msg.content === '!ping') {",
+      "\t\tmsg.channel.send(`Ping! WS PING: ${client.ping}`);",
+      "\t}",
+      "})",
+      "",
+      "client.connect(${1:client_token}, Intents.All)"
+    ],
+    "description": "A basic harmony bot client."
+  },
+  "Class based Basic Client": {
+    "prefix": ["harmony-client-class", "client-class", "client-cl"],
+    "body": [
+      "import { Client, Message, Intents } from 'https://deno.land/x/harmony/mod.ts'",
+      "class Bot extends Client {",
+      "\tconstructor(...args) {",
+      "\t\tsuper(...args)",
+      "\t\tthis.on('ready', this.ready)",
+      "\t\tthis.on('messageCreate', this.messageCreate)",
+      "\t}",
+      "",
+      "\tready() {",
+      "\t\tconsole.log(`Ready! User: ${this.user?.tag}`)",
+      "\t}",
+      "",
+      "\tmessageCreate(msg: Message) {",
+      "\t\tif (msg.content === '!ping') {",
+      "\t\t\tmsg.channel.send(`Ping! WS PING: ${this.user.ping}`)",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "const bot = new Bot()",
+      "bot.connect(${1:client_token}, Intents.NONE)"
+    ],
+    "description": "A basic class based harmony bot client."
+  },
+  "Class based Basic Client with decorators": {
+    "prefix": [
+      "harmony-client-class-decorators",
+      "client-class-decorators",
+      "client-cl-d"
+    ],
+    "body": [
+      "import { Client, Message, Intents, event } from 'https://deno.land/x/harmony/mod.ts'",
+      "class Bot extends Client {",
+      "\tconstructor(...args) {",
+      "\t\tsuper(...args)",
+      "\t}",
+      "",
+      "\t@event()",
+      "\tready() {",
+      "\t\tconsole.log(`Ready! User: ${this.user?.tag}`)",
+      "\t}",
+      "",
+      "\t@event()",
+      "\tmessageCreate(msg: Message) {",
+      "\t\tif (msg.content === '!ping') {",
+      "\t\t\tmsg.channel.send(`Ping! WS PING: ${this.user.ping}`)",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "const bot = new Bot()",
+      "bot.connect(${1:client_token}, Intents.NONE)"
+    ],
+    "description": "A basic class based harmony bot client with decorators"
+  },
+  "Class Command": {
+    "prefix": ["harmony-command-class", "command-class", "cmd-cl"],
+    "body": [
+      "class ${1:command_name}Command extends Command {",
+      "  name = '${1:command_name}'",
+      "",
+      "  execute(ctx: CommandContext) {",
+      "\t\t${2:command_code}",
+      "  }",
+      "}",
+      "",
+      "client.commands.add(new ${1:command_name}Command())"
+    ],
+    "description": "A Harmony CommandClient Command class"
+  },
+  "Command Builder": {
+    "prefix": ["harmony-command-builder", "command-builder", "cmd-build"],
+    "body": [
+      "const ${1:command_name}Command = new CommandBuilder()",
+      "                    .setName('${1:command_name}')",
+      "                    .onExecute((ctx: CommandContext) => {${2:command_code}})",
+      "",
+      "client.commands.add(${1:command_name}Command)"
+    ],
+    "description": "A Harmony CommandBuilder"
+  },
+  "Event Decorator": {
+    "prefix": ["harmony-event-decorator", "event-decorator", "event-d"],
+    "body": [
+      "  @event()",
+      "  ${1:event_name}(${2:event_args}) {",
+      "    ${3:event_code}",
+      "  }"
+    ],
+    "description": "A Harmony event decorator"
+  },
+  "Command Decorator": {
+    "prefix": ["harmony-command-decorator", "command-decorator", "cmd-d"],
+    "body": [
+      "  @command()",
+      "  ${1:command_name}(ctx: CommandContext) {",
+      "    ${2:command_code}",
+      "  }"
+    ],
+    "description": "A Harmony command decorator"
+  }
+}

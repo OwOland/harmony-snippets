@@ -1,0 +1,36 @@
+Arguments: 
+  /home/tejasagarwal/.nvm/versions/node/v15.6.0/bin/node /mnt/c/Users/dell/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js init
+
+PATH: 
+  /usr/bin/node:/home/tejasagarwal/.deno/bin:/home/tejasagarwal/.nvm/versions/node/v15.6.0/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/tejasagarwal/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PostgreSQL/12/bin:/mnt/c/Program Files/PostgreSQL/12/lib:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Java/jdk-14.0.2/bin:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.1.2/bin:/mnt/c/Program Files/JetBrains/WebStorm 2020.1/bin:/mnt/c/MinGW/bin:/mnt/c/Program Files/nvim/bin:/mnt/c/Go/bin:/mnt/c/Users/dell/scoop/shims:/mnt/c/Users/dell/.cargo/bin:/mnt/c/Users/dell/AppData/Local/Programs/Python/Python38-32/Scripts/:/mnt/c/Users/dell/AppData/Local/Programs/Python/Python38-32/:/mnt/c/Users/dell/.windows-build-tools/python27/:/mnt/c/Users/dell/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/dell/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2020.2/bin:/mnt/c/Program Files (x86)/GitHub CLI/:/mnt/c/Users/dell/.dotnet/tools:/mnt/c/Users/dell/AppData/Roaming/npm:/mnt/c/Users/dell/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/heroku/bin:/mnt/c/Program Files/JetBrains/PyCharm 2020.2.1/bin:/mnt/c/Users/dell/.deno/bin:/mnt/c/Users/dell/.dotnet/tools:/mnt/c/Program Files/JetBrains/Rider for Unreal Engine 2020.3.1/bin:/mnt/c/tools/neovim/Neovim/bin:/mnt/c/Users/dell/go/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  15.6.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/mnt/c/Users/dell/AppData/Roaming/npm/node_modules/yarn/lib/cli.js:137008:13)
+      at Interface.emit (node:events:379:20)
+      at Interface._ttyWrite (node:readline:910:16)
+      at ReadStream.onkeypress (node:readline:235:10)
+      at ReadStream.emit (node:events:379:20)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:readline:1179:36)
+      at ReadStream.emit (node:events:379:20)
+      at addChunk (node:internal/streams/readable:313:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
