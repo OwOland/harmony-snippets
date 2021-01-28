@@ -44,7 +44,7 @@
       "}",
       "",
       "const bot = new Bot()",
-      "bot.connect(${1:client_token}, Intents.NONE)"
+      "bot.connect(${1:client_token}, Intents.None)"
     ],
     "description": "A basic class based harmony bot client."
   },
@@ -75,7 +75,7 @@
       "}",
       "",
       "const bot = new Bot()",
-      "bot.connect(${1:client_token}, Intents.NONE)"
+      "bot.connect(${1:client_token}, Intents.None)"
     ],
     "description": "A basic class based harmony bot client with decorators"
   },

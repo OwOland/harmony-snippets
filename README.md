@@ -1,6 +1,6 @@
 <h1 align="center"> Harmony Snippets </h1>
 
-<img align="center" src="https://images-ext-2.discordapp.net/external/D3pODVmgg5FEo3tAhDazehSEcH2Qx6VJI-vo33xRsBc/https/cyberknight.wheres-my-ta.co/6k6jl9.gif?width=964&height=559"  />
+<img align="center" src="https://images-ext-2.discordapp.net/external/I5sbBtaBD8JEMWkMosL8qqTOqRqlIcEgS5GbTJl97kY/https/tejas.has-no-bra.in/f/hSbfta.gif?width=909&height=559"  />
 
 ## Introduction
 
@@ -17,7 +17,7 @@ Harmony is an easy to use Discord API Library for Deno.
 - Use `@decorators` to easily make things!
 - Made with ❤️ TypeScript.
 
-> Tip: We recommend using Tab Completion for quick and faster work. Enabling it in your Visual Studio Code settings or by adding this snippet `"editor.tabCompletion": "on"`
+> Tip: We recommend using Tab Completion for quick and faster work. Enable it in your Visual Studio Code settings or by adding this snippet `"editor.tabCompletion": "on"` to your editor's settings.json file.
 
 ## Snippets
 
@@ -49,8 +49,8 @@ import { Client, Message, Intents } from "https://deno.land/x/harmony/mod.ts";
 class Bot extends Client {
   constructor(...args) {
     super(...args);
-    this.on("ready", this.ready);
-    this.on("messageCreate", this.messageCreate);
+    this.ready.bind(this);
+    this.messageCreate.bind(this);
   }
 
   ready() {
