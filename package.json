@@ -3,11 +3,12 @@
     "displayName": "Harmony Snippets",
     "description": "Snippets for the Deno Discord library, Harmony",
     "publisher": "tejasagarwal",
-    "icon": "https://media.discordapp.net/attachments/783319033730564098/803666306640379914/00ba0e713e2552ff775b8df344df37dc.png?width=128&height=128",
+    "icon": "icon.png",
     "repository": {
+        "type": "git",
         "url": "https://github.com/OwOland/harmony-snippets"
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
     "engines": {
         "vscode": "^1.52.0"
     },
